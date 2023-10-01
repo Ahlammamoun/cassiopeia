@@ -3,9 +3,41 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    cassiopeia
+
 {% endblock  %}
 
 {% block body %}
-   for our students 
+<div class="my-2 py-2 text-center">
+    <img src="assets/favicon.png" height="100" alt="logo" class="logo">
+    <h1 class="display-6 fw-bold">Enseignements, Exellence, quality </h1>
+    <div class="col-lg-6 mx-auto">
+         <p class="lead mb-4 text-muted">cassiopeia</p>
+    </div>
+</div>
+
+<div class="my-2 py-2 text-center">
+    <div class="col-lg-6 mx-auto">
+            <h2 class="display-7 fw-bold">Les cursus</h2>
+            
+        <div class="row row-cols-1 row-cols-md-3 g-3">
+            {% for cursus in cursus %}
+            <div class="col ">
+                <div class="card h-100 ">
+                    <img style="background-image: url({{ cursus.picture }});" class="card-img-top" alt="...">
+                 <div class="card-body">
+                        <h2 class="card-title">{{ cursus.title }}</h2>
+                        <p class="card-text">{{ cursus.accessibilité }}</p>
+                        <h3 class="card-number">{{ cursus.diplôme }}</h3>
+                        <h4 class="card-percent">{{ cursus.success }}</h4>
+                 </div>
+                 </div>
+             </div>
+            {% endfor %}
+            
+            </div>
+               
+        </div>
+    </div>
+</div>
+        
 {% endblock  %}
