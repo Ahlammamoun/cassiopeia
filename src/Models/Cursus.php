@@ -17,7 +17,7 @@ class Cursus
                 'accessibilité' => 'sur concours',
                 'success' => '80%',
                 'difficulté' => '6',
-                'picture' => '',
+                'poster' => 'https://www.egc-vendee.fr/wp-content/uploads/2023/02/comment-devenir-directeur-des-operations.jpg',
         
         
         
@@ -31,7 +31,7 @@ class Cursus
                 'accessibilité' => 'sur concours',
                 'success' => '89%',
                 'difficulté' => '3',
-                'picture' => '',
+                'poster' => 'https://www.egc-vendee.fr/wp-content/uploads/2023/02/comment-devenir-directeur-des-operations.jpg',
         
         
             ],
@@ -45,7 +45,7 @@ class Cursus
                 'accessibilité' => 'sur concours',
                 'success' => '82%',
                 'difficulté' => '4',
-                'picture' => 'https://www.egc-vendee.fr/wp-content/uploads/2023/02/comment-devenir-directeur-des-operations.jpg',
+                'poster' => 'https://www.egc-vendee.fr/wp-content/uploads/2023/02/comment-devenir-directeur-des-operations.jpg',
         
         
             ],
@@ -60,7 +60,7 @@ class Cursus
                 'accessibilité' => 'sur concours',
                 'success' => '75%',
                 'difficulté' => '5',
-                'picture' => '',
+                'poster' => 'https://www.egc-vendee.fr/wp-content/uploads/2023/02/comment-devenir-directeur-des-operations.jpg',
         
         
             ],
@@ -86,6 +86,9 @@ class Cursus
             
     }
 
-
+    public function getCursusById($id)
+    {
+        return $this->show[$id];
+    }
 
 }

@@ -7,26 +7,53 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-
+/**
+ * @Route(name="main_")
+ */
 
 class MainController extends AbstractController
 {
     /**
-     * @Route("/", name="main_home")
+     * @Route("/", name="home")
      */
     public function home(): Response
     {
 
-        $modelCursus = new Cursus();
+        $modelsCursus = new Cursus();
         
         //return new Response("symfony");
 
-        return $this->render('main/index.html.twig',
+        return $this->render('main/home.html.twig',
             [
-                "cursus" => $modelCursus->getAllCursus(),
+                "cursus" => $modelsCursus->getAllCursus(),
 
             ]
-    );
+         );
     }
+
+
+    /**
+     * @Route("/show/{id}", name="show", requirements={"id": "\d+"})
+     */
+    public function show($id) : Response
+    {
+        $modelCursusById = new Cursus($id);
+
+        return $this->render('main/show.html.twig',
+            [
+                "cursusById" => $modelCursusById->getCursusById($id),
+
+            ]
+        
+    
+    
+        
+        );
+    }
+
+
+
+
+
 
 }

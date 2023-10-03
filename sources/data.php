@@ -10,7 +10,7 @@ $show = [
         'accessibilité' => 'sur concours',
         'success' => '80%',
         'difficulté' => '6',
-        'picture' => '',
+        'picture' => 'https://www.egc-vendee.fr/wp-content/uploads/2023/02/comment-devenir-directeur-des-operations.jpg',
 
 
 
@@ -24,7 +24,7 @@ $show = [
         'accessibilité' => 'sur concours',
         'success' => '89%',
         'difficulté' => '3',
-        'picture' => '',
+        'picture' => 'https://www.egc-vendee.fr/wp-content/uploads/2023/02/comment-devenir-directeur-des-operations.jpg',
 
 
     ],
@@ -53,7 +53,7 @@ $show = [
         'accessibilité' => 'sur concours',
         'success' => '75%',
         'difficulté' => '5',
-        'picture' => '',
+        'picture' => 'https://www.egc-vendee.fr/wp-content/uploads/2023/02/comment-devenir-directeur-des-operations.jpg',
 
 
     ],

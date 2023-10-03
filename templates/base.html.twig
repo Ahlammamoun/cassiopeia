@@ -16,21 +16,21 @@
 <nav class="navbar navbar-expand-lg text-light bg-dark">
    <div class="container-fluid">
     <img src="/assets/favicon.png" height="25" alt="logo" class="logo">
-      <a class="navbar-brand text-danger text-uppercase font-weight-bold" href="" >cassiopeia</a>
+      <a class="navbar-brand text-uppercase font-weight-bold" href="{{ path ('main_home') }}" >cassiopeia</a>
       <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-               <a class="nav-link active text-light" aria-current="page" href="">Accueil</a>
+               <a class="nav-link active text-primary" aria-current="page" href="">Accueil</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link text-light" href="">Discipline
+               <a class="nav-link text-primary" href="">Discipline
 </a>
             </li>
             <li class="nav-item ">
-               <a class="nav-link text-light" href="">Professeur</a>
+               <a class="nav-link text-primary" href="">Professeur</a>
                </li>
             
  
@@ -51,20 +51,17 @@
             </ul>
             </li>
          <li>
-
-  
-            <li>
-                  <a class="nav-link btn btn-danger text-light" href="">Connexion</a>
-             </li>
- </ul>
-         <form class="d-flex" action="html.list" >
-            <input class="form-control form-control-sm me-2" name="search" type="search" placeholder="rechercher.." >
-            <button class="btn btn-outline-danger" type="submit"><i class="bi bi-search"></i></button>
-         </form>
+           <li>
+            <a class="nav-link btn btn-dark border-primary text-primary align-items-center fst-normal" href="">Connexion</a>
+         </li>
+       </ul>
+      
       </div>
    </div>
 </nav>
+{% block title %}
 
+{% endblock %}
 
 {% block body %}
 
