@@ -12,8 +12,11 @@
 
 
 <body>
-
-<nav class="navbar navbar-expand-lg text-light bg-dark">
+{% if app.session.get('theme') == 'firstTheme' %}
+   <nav class="navbar navbar-expand-lg text-light bg-dark">
+{% else %}
+     <nav class="navbar navbar-expand-lg text-light" style="background-color: #87CEEB; ">
+{% endif %}    
    <div class="container-fluid">
     <img src="/assets/favicon.png" height="25" alt="logo" class="logo">
       <a class="navbar-brand text-uppercase font-weight-bold" href="{{ path ('main_home') }}" >cassiopeia</a>
@@ -69,13 +72,13 @@
 
 
 
-
+{% if app.session.get('theme') == 'firstTheme' %}
       <footer class="container-fluid py-4 border-top text-center bg-dark ">
-         <span class="text-muted"> &hearts;
-         <br><small>Thème :
-               <a href="" class="link-secondary text-decoration-none">
-                
-            </a></small>
+{% else %}
+    <footer class="container-fluid py-4 border-top text-center"  style="background-color:	#87CEEB; ">
+{% endif %}        
+         <span class="text-muted">cassiopeia &hearts; 
+         <br><small>Thème :<a href="{{ path('main_theme_switcher')}}" class="link-secondary text-decoration-none"><i class="bi bi-toogle-on mx-1"></i>change the Theme</a></small>
          </span>
       </footer>
 

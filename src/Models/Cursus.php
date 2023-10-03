@@ -17,7 +17,7 @@ class Cursus
                 'accessibilité' => 'sur concours',
                 'success' => '80%',
                 'difficulté' => '6',
-                'poster' => 'https://www.egc-vendee.fr/wp-content/uploads/2023/02/comment-devenir-directeur-des-operations.jpg',
+                'poster' => 'https://media.istockphoto.com/id/1398994132/fr/photo/femme-daffaires-heureuse-utilisant-une-tablette-num%C3%A9rique-jeune-femme-daffaires-de-premier.jpg?s=612x612&w=0&k=20&c=vFfNvsYtWhGhoFBK1UOBYrLXIU2GHUvhyd0mFjFSTYA=',
         
         
         
@@ -31,7 +31,7 @@ class Cursus
                 'accessibilité' => 'sur concours',
                 'success' => '89%',
                 'difficulté' => '3',
-                'poster' => 'https://www.egc-vendee.fr/wp-content/uploads/2023/02/comment-devenir-directeur-des-operations.jpg',
+                'poster' => 'https://img.freepik.com/photos-gratuite/femme-affaires-dans-bureau-moderne-hommes-affaires-travaillant_1139-954.jpg',
         
         
             ],
@@ -45,7 +45,7 @@ class Cursus
                 'accessibilité' => 'sur concours',
                 'success' => '82%',
                 'difficulté' => '4',
-                'poster' => 'https://www.egc-vendee.fr/wp-content/uploads/2023/02/comment-devenir-directeur-des-operations.jpg',
+                'poster' => 'https://thumbs.dreamstime.com/b/belle-femme-moyen-orientale-portant-veste-d-affaires-et-lunettes-forte-personne-montrant-muscle-bras-confiant-fier-de-la-puissance-217575902.jpg',
         
         
             ],

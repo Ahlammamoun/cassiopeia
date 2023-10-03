@@ -16,17 +16,18 @@
   
 </div>
 
-<div class="my-0 py-0 text-center">
-    <div class="col-lg-5 mx-auto">
+<div class=" text-center">
+    <div class="mx-auto">
             <h2 class="display-7 fw-bold">Les cursus</h2>
             
-        <div class="row row-cols-1 row-cols-md-3 g-3">
+        <div class= "container mt-2">
           
-            <div class="col">
-                <div class="card h-100 border-dark">
-                    
+            <div class="d-inline p-2">
+                <div class="card border-dark">
                  <div class="card-body">
-                  <img class="col-4 movie__poster img-thumbnail" style="background-image: url({{ cursusById.picture }});" class="images">
+                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm bg-with">
+                     <img class="col-4 movie__poster img-thumbnail" style="background-image: url({{ cursusById.poster }});" class="images">
+                
                         <h2 class="card-title fst-normal">{{ cursusById.title }}</h2>
                         <p class="card-text fst-normal">{{ cursusById.accessibilité }}</p>
                         <h3 class="card-number fst-normal">{{ cursusById.diplôme }}</h3>
@@ -35,7 +36,7 @@
                  </div>
                  </div>
              </div>
-          
+              </div>
             
             </div>
                
