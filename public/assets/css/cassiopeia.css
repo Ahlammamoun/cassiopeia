@@ -44,7 +44,20 @@ a.link:hover {
     background-size: cover;
 
 }
+ul.dropdown-menu.show {
+  
+    background-color:black;
+}
 
+a.dropdown-item {
+    color: #0d6efd;
+    font-style: normal;
+}
+
+a.dropdown-item:hover {
+   
+    background-color:black;
+}
 .tbody {
     width: 100%;
     margin-bottom: 1rem;
