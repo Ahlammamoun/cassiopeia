@@ -108,42 +108,6 @@ class Circuit
         return $this;
     }
 
-    public function getCourse(): ?string
-    {
-        return $this->course;
-    }
-
-    public function setCourse(string $course): self
-    {
-        $this->course = $course;
-
-        return $this;
-    }
-
-    public function getTeacher(): ?string
-    {
-        return $this->teacher;
-    }
-
-    public function setTeacher(string $teacher): self
-    {
-        $this->teacher = $teacher;
-
-        return $this;
-    }
-
-    public function getStudent(): ?string
-    {
-        return $this->student;
-    }
-
-    public function setStudent(string $student): self
-    {
-        $this->student = $student;
-
-        return $this;
-    }
-
     public function getDuration(): ?int
     {
         return $this->duration;
