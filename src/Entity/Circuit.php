@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\CircuitRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -66,6 +68,16 @@ class Circuit
      * @ORM\Column(type="string", length=1000)
      */
     private $picture;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Teacher::class, mappedBy="circuit")
+     */
+    private $teachers;
+
+    public function __construct()
+    {
+        $this->teachers = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -188,6 +200,36 @@ class Circuit
     public function setPicture(string $picture): self
     {
         $this->picture = $picture;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Teacher>
+     */
+    public function getTeachers(): Collection
+    {
+        return $this->teachers;
+    }
+
+    public function addTeacher(Teacher $teacher): self
+    {
+        if (!$this->teachers->contains($teacher)) {
+            $this->teachers[] = $teacher;
+            $teacher->setCircuit($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTeacher(Teacher $teacher): self
+    {
+        if ($this->teachers->removeElement($teacher)) {
+            // set the owning side to null (unless already changed)
+            if ($teacher->getCircuit() === $this) {
+                $teacher->setCircuit(null);
+            }
+        }
 
         return $this;
     }
