@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\StudentRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -31,6 +33,16 @@ class Student
      * @ORM\Column(type="integer")
      */
     private $average;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Teacher::class, mappedBy="students")
+     */
+    private $teachers;
+
+    public function __construct()
+    {
+        $this->teachers = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -69,6 +81,33 @@ class Student
     public function setAverage(int $average): self
     {
         $this->average = $average;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Teacher>
+     */
+    public function getTeachers(): Collection
+    {
+        return $this->teachers;
+    }
+
+    public function addTeacher(Teacher $teacher): self
+    {
+        if (!$this->teachers->contains($teacher)) {
+            $this->teachers[] = $teacher;
+            $teacher->addStudent($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTeacher(Teacher $teacher): self
+    {
+        if ($this->teachers->removeElement($teacher)) {
+            $teacher->removeStudent($this);
+        }
 
         return $this;
     }

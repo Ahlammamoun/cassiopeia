@@ -44,6 +44,11 @@
             <h3 class="card-number fst-normal">diplôme Bac + {{ circuit.diplomas }}</h3>
             <h4 class="card-percent fst-normal">taux de réussite {{ circuit.success }} %</h4>
             <h5 class="card-percent fst-normal">difficulté => {{ circuit.difficulties }}</h5>
+            <h6>{% for teacher in circuit.teachers %}
+                <span>{{ teacher.firstname }} {{ teacher.lastname }}</span>
+                {% endfor %}
+            </6>
+
           </div>
   </div>
  </div>

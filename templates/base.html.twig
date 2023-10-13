@@ -15,25 +15,25 @@
 {% if app.session.get('theme') == 'firstTheme' %}
    <nav class="navbar navbar-expand-lg text-light bg-dark">
 {% else %}
-     <nav class="navbar navbar-expand-lg text-light" style="background-color: #87CEEB; ">
+     <nav class="navbar navbar-expand-lg text-light" style="background-color: #000000; ">
 {% endif %}    
    <div class="container-fluid">
     <img src="/assets/favicon.png" height="25" alt="logo" class="logo">
-      <a class="navbar-brand text-uppercase font-weight-bold" href="{{ path ('cursus') }}" >cassiopeia</a>
+      <a class="navbar-brand text-uppercase font-weight-bold" href="{{ path ('cursus') }}">cassiopeia</a>
       <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-               <a class="nav-link active text-primary" aria-current="page" href="">Accueil</a>
+               <a class="nav-link active text-primary" aria-current="page" href="{{ path ('cursus') }}">Cursus</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link text-primary" href="">Discipline
+               <a class="nav-link text-primary" href="">Diplômes
 </a>
             </li>
             <li class="nav-item ">
-               <a class="nav-link text-primary" href="">Professeur</a>
+               <a class="nav-link text-primary" href="">Utilisateurs</a>
                </li>
             
  
@@ -52,15 +52,11 @@
                </li>
                <li><a class="dropdown-item" href="">Déconnexion</a></li>
             </ul>
-            </li>
-         <li>
-           <li>
-            <a class="nav-link btn btn-dark border-primary text-primary align-items-center fst-normal" href="">Connexion</a>
-         </li>
+            </li>     
        </ul>
-      
       </div>
    </div>
+      <a href="#" class="btn btn-dark btn-lg border-primary text-primary fst-normal" role="button" aria-pressed="true">Connexion</a>
 </nav>
 {% block title %}
 
@@ -73,9 +69,9 @@
 
 
 {% if app.session.get('theme') == 'firstTheme' %}
-      <footer class="container-fluid py-4 border-top text-center bg-dark ">
+      <footer class="container-fluid py-4 border-top text-center" style="background-color: #000000; ">
 {% else %}
-    <footer class="container-fluid py-4 border-top text-center"  style="background-color:	#87CEEB; ">
+    <footer class="container-fluid py-4 border-top text-center"  style="background-color:	#000000; ">
 {% endif %}        
          <span class="text-muted">cassiopeia &hearts; 
          <br><small>Thème :<a href="{{ path('main_theme_switcher')}}" class="link-secondary text-decoration-none"><i class="bi bi-toogle-on mx-1"></i>change the Theme</a></small>

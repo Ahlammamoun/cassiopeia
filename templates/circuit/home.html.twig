@@ -25,16 +25,16 @@
                 <div class="card h-100 border-dark">
 
 {% if app.session.get('theme') == 'firstTheme' %}
-    <div class="card-body"  style="background-color: #0d6efd";>
+    <div class="card-body"  style="background: linear-gradient(180deg, blue, black)";>
      <h2><a class="link" href="{{ path('circuit', {'id' : cursus.id }) }}"  class="link-underline-light" >{{ cursus.title }}</a></h2><br>
-    <h3 class="card-number fst-normal" >Diplôme Bac + {{ cursus.diplomas }}</h3>
-    <h4 class="card-percent fst-normal" >Admission sur concours</h4>
+    <h3 class="card-number fst-normal" style="color: #1515ce";>Diplôme Bac + {{ cursus.diplomas }}</h3>
+    <h4 class="card-percent fst-normal" style="color: #1515ce">Admission sur concours</h4>
   
 
 
 {% else %}
        <div class="card-body text-light"  style="background-color: #000000";>
-   <h2><a class="link text-primary" href="{{ path('circuit', {'id' : cursus.id }) }}"  style="color= #0d6efd" class="link-underline-light" >{{ cursus.title }}</a></h2><br> 
+   <h2><a class="link_theme" href="{{ path('circuit', {'id' : cursus.id }) }}"  style="color= #0d6efd" class="link-underline-light" >{{ cursus.title }}</a></h2><br> 
     <h3 class="card-number fst-normal" style="color: #0d6efd";>Diplôme Bac + {{ cursus.diplomas }}</h3>
   <h5 class="card-percent fst-normal"style="color: #0d6efd">Admission sur concours</h5>
 

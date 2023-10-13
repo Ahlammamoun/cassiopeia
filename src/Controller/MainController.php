@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Models\Cursus;
+
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
