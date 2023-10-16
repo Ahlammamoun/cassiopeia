@@ -11,7 +11,7 @@ use App\Entity\Teacher;
 class TeacherController extends AbstractController
 {
     /**
-     * @Route("/teacher", name="app_teacher")
+     * @Route("/teacher", name="teacher")
      */
     public function index(TeacherRepository $teacherRepos): Response
     {
@@ -26,4 +26,6 @@ class TeacherController extends AbstractController
 
         
     }
+
+
 }

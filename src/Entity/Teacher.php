@@ -40,6 +40,11 @@ class Teacher
      */
     private $students;
 
+    /**
+     * @ORM\Column(type="string", length=500)
+     */
+    private $formation;
+
     public function __construct()
     {
         $this->students = new ArrayCollection();
@@ -106,6 +111,18 @@ class Teacher
     public function removeStudent(Student $student): self
     {
         $this->students->removeElement($student);
+
+        return $this;
+    }
+
+    public function getFormation(): ?string
+    {
+        return $this->formation;
+    }
+
+    public function setFormation(string $formation): self
+    {
+        $this->formation = $formation;
 
         return $this;
     }

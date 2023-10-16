@@ -61,6 +61,16 @@ a.nav-link.text-primary:hover {
     margin: 20%;
 }
 
+.card-body_teacher {
+   
+    background: linear-gradient(180deg, blue, black);
+    
+}
+.card-teacher {
+  
+    width: 70%;
+    text-align: center;
+}
 .col-4.movie__poster {
     background-repeat: no-repeat;
     background-size: cover;
@@ -96,4 +106,27 @@ img.logo {
 .card-body {
 
     background-color: #0d6efd;
+}
+h5.card-title, p.card-text {
+
+    color: rgb(145, 141, 124);
+    font-style: normal;
+    font-size: large;
+
+}
+h5.card-title {
+
+   
+font-style: normal;
+font-size: x-large;
+color: rgb(65, 105, 235);
+
+}
+
+li.list-group-item {
+    font-style: normal;
+    font-weight: bold;
+    font-size: larger;
+    background: linear-gradient(180deg, blue, black);
+    color: rgb(189, 170, 170) ;
 }

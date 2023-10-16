@@ -28,7 +28,7 @@
 
 {% if app.session.get('theme') == 'firstTheme' %}
 
-        <div class="card-body" style="background-color: #0d6efd">
+        <div class="card-body text-primary" style="background: linear-gradient(180deg, blue, black)">
 
 {% else %}             
 
@@ -43,10 +43,15 @@
            <p class="card-text fst-normal">{{ circuit.duration }} ans de formation</p>
             <h3 class="card-number fst-normal">diplôme Bac + {{ circuit.diplomas }}</h3>
             <h4 class="card-percent fst-normal">taux de réussite {{ circuit.success }} %</h4>
-            <h5 class="card-percent fst-normal">difficulté => {{ circuit.difficulties }}</h5>
-            <h6>{% for teacher in circuit.teachers %}
-                <span>{{ teacher.firstname }} {{ teacher.lastname }}</span>
-                {% endfor %}
+            <h5 class="card-percent fst-normal">difficulté => {{ circuit.difficulties }}</h5><br>
+
+
+             <p class="card-text fst-normal">enseignants de la discipline</p>
+<h6>{% for teacher in circuit.teachers %}
+                <ul class="list-group">
+                  <li class="list-group-item">{{ teacher.firstname }} {{ teacher.lastname }}</li>
+                </ul>
+{% endfor %}
             </6>
 
           </div>
