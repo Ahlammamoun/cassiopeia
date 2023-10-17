@@ -36,19 +36,20 @@
 
 {% endif %}  
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm bg-with">
-          <img class="col-4 movie__poster img-thumbnail" style="background-image: url({{ circuit.picture }});" class="images">
+        <img class="col-4 movie__poster img-thumbnail" style="background-image: url({{ circuit.picture }});" class="images">
                 
             
-                <h3 class="card-percent fst-normal">{{ circuit.description }}</h4>
-           <p class="card-text fst-normal">{{ circuit.duration }} ans de formation</p>
-            <h3 class="card-number fst-normal">diplôme Bac + {{ circuit.diplomas }}</h3>
-            <h4 class="card-percent fst-normal">taux de réussite {{ circuit.success }} %</h4>
-            <h5 class="card-percent fst-normal">difficulté => {{ circuit.difficulties }}</h5><br>
+        <h3 class="card-percent fst-normal">{{ circuit.description }}</h4>
+        <p class="card-text fst-normal">{{ circuit.duration }} ans de formation</p>
+        <h3 class="card-number fst-normal">diplôme Bac + {{ circuit.diplomas }}</h3>
+        <h4 class="card-percent fst-normal">taux de réussite {{ circuit.success }} %</h4>
+        <h5 class="card-percent fst-normal">difficulté => {{ circuit.difficulties }}</h5><br><br>
 
+        <ul class="list-group">
+        <li class="list-group-item">enseigné par Mr et Mme</li>
 
-             <p class="card-text fst-normal">enseignants de la discipline</p>
-<h6>{% for teacher in circuit.teachers %}
-                <ul class="list-group">
+{% for teacher in circuit.teachers %}
+       
                   <li class="list-group-item">{{ teacher.firstname }} {{ teacher.lastname }}</li>
                 </ul>
 {% endfor %}

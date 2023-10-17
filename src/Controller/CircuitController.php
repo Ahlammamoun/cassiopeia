@@ -9,9 +9,6 @@ use App\Repository\CircuitRepository;
 use App\Entity\Circuit;
 use Doctrine\ORM\EntityManagerInterface;
 
-
-
-
 class CircuitController extends AbstractController
 {
     /**
@@ -23,11 +20,13 @@ class CircuitController extends AbstractController
         //dump($circuit);
         //dd($circuit);
 
-        return $this->render('circuit/show.html.twig', 
-        [
+        return $this->render(
+            'circuit/show.html.twig',
+            [
        
             'circuit' => $circuit
-        ]);
+        ]
+        );
     }
 
 
@@ -39,18 +38,19 @@ class CircuitController extends AbstractController
         $cursus = $circuitRepository->findAll();
    
     
-        return $this->render('circuit/home.html.twig',
+        return $this->render(
+            'circuit/home.html.twig',
             [
                 "cursus" => $cursus,
             ]
-         );
+        );
     }
 
 
 
-     /**
-     * @Route("/cursus/create", name="cursus_create")
-     */
+    /**
+    * @Route("/cursus/create", name="cursus_create")
+    */
     public function create(EntityManagerInterface $doctrine)
     {
 
@@ -77,7 +77,7 @@ class CircuitController extends AbstractController
 
     }
 
-      /**
+    /**
      * @Route("/cursus/update/{id}", requirements={"id": "\d+"})
      */
     public function update($id, CircuitRepository $circuitRep, EntityManagerInterface $doctrine)
