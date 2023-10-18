@@ -6,6 +6,7 @@
   <div class="col-lg-6 mx-auto text-center ">
          <p class="lead mb-4 text-muted fst-normal fw-bold">cassiopeia</p>
     </div>
+
 {% endblock  %}
 
 {% block body %}
@@ -18,7 +19,7 @@
 <div class="my-0 py-0 text-center">
     <div class="col-lg-9 mx-auto">
             <h2 class="display-7 fw-bold">Les cursus</h2>
-            
+           
         <div class="row row-cols-1 row-cols-md-2 g-2 ">
             {% for cursus in cursus %}
             <div class="d-inline p-2 ">
@@ -29,7 +30,6 @@
      <h2><a class="link" href="{{ path('circuit', {'id' : cursus.id }) }}"  class="link-underline-light" >{{ cursus.title }}</a></h2><br>
     <h3 class="card-number fst-normal" style="color: #1515ce";>Diplôme Bac + {{ cursus.diplomas }}</h3>
     <h4 class="card-percent fst-normal" style="color: #1515ce">Admission sur concours</h4>
-  
 
 
 {% else %}
@@ -41,17 +41,50 @@
 
 {% endif %}  
                  
-                                            
-                    
-                 </div>
-                 </div>
-             </div>
-            {% endfor %}
-            
-            </div>
-               
-        </div>
-    </div>
+                                              
+ </div>
 </div>
-        
+</div>
+
+{% endfor %}
+
+  
+<div class="card" style="width: 25%";>
+  <img src="https://www.objets-de-legende.fr/wp-content/uploads/sites/222/2017/12/motarboard-histoire.png" class="card-img-top" alt="...">
+  <div class="card-body" style="background-color: #000000">
+    <h5 class="card-title">Les Lauréas 2022</h5>
+    <p class="card-text">La route à été courbe et sinueuse mais ils ont gardés l'esprit droit, they did it, Congratulations</p>
+    <a href="{{ path ('laureat') }}" class="btn btn-dark fst-normal" style="background: linear-gradient(250deg, grey, black)">see more</a>
+  </div>
+</div> 
+<div class="card" style="width: 25%;">
+  <img src="https://static.wixstatic.com/media/108ff4_8d9dc6bb2d9e4470903c5a303890cfa5~mv2.jpg/v1/fill/w_640,h_496,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/108ff4_8d9dc6bb2d9e4470903c5a303890cfa5~mv2.jpg" class="card-img-top" alt="...">
+  <div class="card-body" style="background: linear-gradient(250deg, blue, black)">
+    <h5 class="card-title">Cassiopeia Internationale</h5>
+    <p class="card-text">Parceque nous sommes ouvert au monde et aux cerveaux , nous sommes présent sur tous les continents</p>
+    <a href="#" class="btn btn-dark fst-normal" style="background: linear-gradient(250deg, blue, black)">see more</a>
+  </div>
+
+</div>
+<div class="card" style="width: 25%;">
+  <img src="https://images.rtl.fr/~c/2000v2000/rtl/www/1162944-luca-de-meo-pdg-de-renault.jpg" class="card-img-top" alt="...">
+  <div class="card-body" style="background-color: #000000">
+    <h5 class="card-title ">Les anciens</h5>
+    <p class="card-text ">Ils sont liés à Cassipoeia, aujourd'hui ils sont directeur financier , économiste et plus encore</p>
+    <a href="#" class="btn btn-dark fst-normal" style="background: linear-gradient(250deg, grey, black)">see more</a>
+  </div>
+</div>
+<div class="card" style="width: 25%;">
+  <img src="https://assets.website-files.com/606053c53975b03fbab75e38/61ea75414264666bbe1587ac_14.jpg" class="card-img-top" alt="...">
+  <div class="card-body" style="background: linear-gradient(250deg, blue, black)">
+    <h5 class="card-title">Nos objectifs</h5>
+    <p class="card-text ">Toujours plus, encore mieux notre fil conducteur , mieux qu'hier, moins bien que demain</p>
+    <a href="#" class="btn btn-dark fst-normal text-primary" style="background: linear-gradient(250deg, blue, black)" >see more</a>
+  </div>
+  </div>
+
+</div>
+
+
+</div>
 {% endblock  %}

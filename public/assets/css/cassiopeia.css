@@ -103,6 +103,9 @@ img.logo {
         height: 3em;
 
 }
+img.card-img-top {
+    height: 60%;
+}
 .card-body {
 
     background-color: #0d6efd;

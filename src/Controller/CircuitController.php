@@ -11,6 +11,9 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class CircuitController extends AbstractController
 {
+
+
+
     /**
      * @Route("/circuit/{id}", name="circuit", requirements={"id": "\d+"})
      */
