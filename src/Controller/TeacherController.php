@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\TeacherRepository;
 use App\Entity\Teacher;
 
+
 class TeacherController extends AbstractController
 {
     /**
@@ -16,16 +17,17 @@ class TeacherController extends AbstractController
     public function index(TeacherRepository $teacherRepos): Response
     {
         $teachers = $teacherRepos->findAll();
-
+        
 
         return $this->render('teacher/index.html.twig', [
             'teachers' => $teachers,
+         
         ]);
 
 
 
         
     }
-
+   
 
 }

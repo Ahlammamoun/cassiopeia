@@ -13,7 +13,7 @@
 
 <body>
 {% if app.session.get('theme') == 'firstTheme' %}
-   <nav class="navbar navbar-expand-lg text-light" style="background-color: #000000; ">
+   <nav class="navbar navbar-expand-lg text-light" style="background: linear-gradient(-450deg, blue, black)">
 {% else %}
      <nav class="navbar navbar-expand-lg text-light" style="background-color: #000000; ">
 {% endif %}    
@@ -69,12 +69,36 @@
 
 
 {% if app.session.get('theme') == 'firstTheme' %}
-      <footer class="container-fluid py-4 border-top text-center" style="background-color: #000000; ">
+      <footer class="container-fluid py-4 border-top text-center" style="background: linear-gradient(450deg, blue, black)">
+ <nav class="navbar navbar-expand-lg text-light" style="background: linear-gradient(450deg, blue, black)">    
+   <div class="container-fluid">
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+               <a class="nav-link text-primary fst-normal" aria-current="page" href="{{ path ('cursus') }}">Nous contacter</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link text-primary fst-normal" href=""></a>
+
+            </li>
+            <li class="nav-item ">
+               <a class="nav-link text-primary fst-normal" href="{{ path ('teacher') }}">A propos de nous</a>
+               </li>     
+  
+   </ul>
+      </div>
+   </div>
+<a class="nav-link text-primary fst-normal" href="{{ path('main_theme_switcher')}}">Changer de thème</a>
+
+</nav>
+
+
 {% else %}
     <footer class="container-fluid py-4 border-top text-center"  style="background-color:	#000000; ">
-{% endif %} 
 
-   
  <nav class="navbar navbar-expand-lg text-light" style="background-color: #000000; ">    
    <div class="container-fluid">
       <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -99,12 +123,12 @@
 <a class="nav-link text-primary fst-normal" href="{{ path('main_theme_switcher')}}">Changer de thème</a>
 
 </nav>
-         
-   
- 
-         
 
-      </footer>
+
+
+{% endif %} 
+
+   </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"crossorigin="anonymous"></script>
 
