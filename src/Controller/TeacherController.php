@@ -16,7 +16,7 @@ class TeacherController extends AbstractController
      */
     public function index(TeacherRepository $teacherRepos): Response
     {
-        $teachers = $teacherRepos->findAll();
+        $teachers = $teacherRepos->orderByLastname();
         
 
         return $this->render('teacher/index.html.twig', [

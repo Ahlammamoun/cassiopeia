@@ -17,7 +17,7 @@ class LaureatController extends AbstractController
     public function laureat(LaureatRepository $laureatRepo): Response
     {
      
-        $laureats = $laureatRepo->findAll();
+        $laureats = $laureatRepo->orderByLastname();
 
         return $this->render(
             'laureat/laureat.html.twig',

@@ -39,6 +39,15 @@ class TeacherRepository extends ServiceEntityRepository
         }
     }
 
+    public function orderByLastname(){
+
+        $resultats = $this->createQueryBuilder('t')
+        ->orderBy('t.lastname', 'ASC')
+        ->getQuery()
+        ->getResult();
+
+        return $resultats;
+    }
 //    /**
 //     * @return Teacher[] Returns an array of Teacher objects
 //     */

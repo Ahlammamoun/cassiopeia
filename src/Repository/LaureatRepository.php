@@ -38,7 +38,16 @@ class LaureatRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
+    public function orderByLastname()
+    {
+        $results = $this->createQueryBuilder('l')
+        ->orderBy('l.lastname', 'ASC')
+        ->getQuery()
+        ->getResult();
 
+        return $results;
+
+    }
 //    /**
 //     * @return Laureat[] Returns an array of Laureat objects
 //     */
