@@ -3,18 +3,20 @@
 
 
 {% block title %}
+<div class="col-lg-6 mx-auto text-center ">
+     <p class="lead mb-4 text-muted fst-normal fw-bold">cassiopeia</p>
+</div>
+<div class="my-2 py-2 text-center">    
+    <img src="{{ asset('assets/favicon.png') }}" height="100" alt="logo" class="logo">
+    <h1 class="display-6 fw-bold">Enseignements, Exellence, quality </h1>
+  
+</div>
 
 {% endblock %}
 
 {% block body %}
 
 
-
-<div class="my-2 py-2 text-center">    
-    <img src="{{ asset('assets/favicon.png') }}" height="100" alt="logo" class="logo">
-    <h1 class="display-6 fw-bold">Enseignements, Exellence, quality </h1>
-  
-</div>
 
 <div class=" text-center">
     <div class="mx-auto">
@@ -53,6 +55,9 @@
                   <li class="list-group-item">{{ teacher.firstname }} {{ teacher.lastname }}</li>
                 </ul>
 {% endfor %}
+
+
+        <a class="fst-normal" href="{{ path('review') }}">ajouter un commentaire</a>
             </6>
 
           </div>
