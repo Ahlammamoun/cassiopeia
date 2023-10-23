@@ -74,9 +74,15 @@ class Circuit
      */
     private $teachers;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Review::class, mappedBy="reviews")
+     */
+    private $reviews;
+
     public function __construct()
     {
         $this->teachers = new ArrayCollection();
+        $this->reviews = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -192,6 +198,36 @@ class Circuit
             // set the owning side to null (unless already changed)
             if ($teacher->getCircuit() === $this) {
                 $teacher->setCircuit(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Review>
+     */
+    public function getReviews(): Collection
+    {
+        return $this->reviews;
+    }
+
+    public function addReview(Review $review): self
+    {
+        if (!$this->reviews->contains($review)) {
+            $this->reviews[] = $review;
+            $review->setReviews($this);
+        }
+
+        return $this;
+    }
+
+    public function removeReview(Review $review): self
+    {
+        if ($this->reviews->removeElement($review)) {
+            // set the owning side to null (unless already changed)
+            if ($review->getReviews() === $this) {
+                $review->setReviews(null);
             }
         }
 

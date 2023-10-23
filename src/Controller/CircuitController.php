@@ -23,12 +23,12 @@ class CircuitController extends AbstractController
         //dump($circuit);
         //dd($circuit);
 
-        return $this->render(
-            'circuit/show.html.twig',
+        return $this->render('circuit/show.html.twig',
+            
             [
        
             'circuit' => $circuit
-        ]
+            ]
         );
     }
 

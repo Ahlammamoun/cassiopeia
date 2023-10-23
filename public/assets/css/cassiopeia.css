@@ -1,84 +1,101 @@
-body{
+body {
     font-family: Georgia, serif;
     background-color: rgb(247, 240, 240);
-   
+
 }
+
 h1.display-6.fw-bold {
 
     font-style: normal;
 }
+
 h1.col-4.movie__poster.img-thumbnail {
     width: 100%;
     height: 45%;
 }
+
 h2.display-7.fw-bold {
     font-style: normal;
 }
+
 img.col-4.movie__poster.img-thumbnail {
     height: 20em;
     width: 100%;
 }
+
 .col-4.movie__poster.img-thumbnail {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 a.link {
     text-decoration: none;
     color: black;
     font-style: normal;
 }
+
 a.link:hover {
-    
+
     color: rgb(8, 8, 97);
 }
+
 a.link_theme {
 
     text-decoration: none;
-    color:  #0d6efd;
+    color: #0d6efd;
     font-style: normal;
 }
+
 a.link_theme:hover {
 
-    color:  rgb(21, 21, 206);
-   
+    color: rgb(21, 21, 206);
+
 }
+
 a.btn.btn-dark.btn-lg.border-primary.text-primary.fst-normal {
     margin-right: 0.7em;
 }
+
 a.navbar-brand.text-uppercase.font-weight-bold:hover {
     font-weight: bolder;
     color: rgb(21, 21, 206);
 }
+
 a.nav-link.text-primary:hover {
     font-weight: bolder;
     color: #1515ce;
 }
+
 ::after {
     color: #1515ce;
 }
+
 .col {
-  
+
     margin: 20%;
 }
 
 .card-body_teacher {
-   
+
     background: linear-gradient(180deg, blue, black);
-    
+
 }
+
 .card-teacher {
-  
+
     width: 70%;
     text-align: center;
 }
+
 .col-4.movie__poster {
     background-repeat: no-repeat;
     background-size: cover;
 
 }
+
 ul.dropdown-menu.show {
-  
-    background-color:black;
+
+    background-color: black;
 }
 
 a.dropdown-item {
@@ -87,9 +104,10 @@ a.dropdown-item {
 }
 
 a.dropdown-item:hover {
-   
-    background-color:black;
+
+    background-color: black;
 }
+
 .tbody {
     width: 100%;
     margin-bottom: 1rem;
@@ -97,32 +115,48 @@ a.dropdown-item:hover {
     background-color: darkgrey;
 }
 
+form {
+    height: 3%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    color: rgb(189, 170, 170);
+    background: linear-gradient(180deg, blue, black);
+}
+
 img.logo {
-   
-        width: 5em;
-        height: 3em;
+
+    width: 5em;
+    height: 3em;
 
 }
+
 img.card-img-top {
     height: 60%;
 }
+
 .card-body {
 
     background-color: #0d6efd;
 }
-h5.card-title, p.card-text {
+
+h5.card-title,
+p.card-text {
 
     color: rgb(145, 141, 124);
     font-style: normal;
     font-size: large;
 
 }
+
 h5.card-title {
 
-   
-font-style: normal;
-font-size: x-large;
-color: rgb(65, 105, 235);
+
+    font-style: normal;
+    font-size: x-large;
+    color: rgb(65, 105, 235);
 
 }
 
@@ -131,5 +165,5 @@ li.list-group-item {
     font-weight: bold;
     font-size: larger;
     background: linear-gradient(180deg, blue, black);
-    color: rgb(189, 170, 170) ;
+    color: rgb(189, 170, 170);
 }

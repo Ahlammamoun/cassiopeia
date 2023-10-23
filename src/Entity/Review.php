@@ -38,6 +38,26 @@ class Review
      */
     private $Program;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Program::class, inversedBy="review")
+     */
+    private $review;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Circuit::class, inversedBy="reviews")
+     */
+    private $reviews;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $username;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $email;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -87,6 +107,54 @@ class Review
     public function setProgram(?Program $Program): self
     {
         $this->Program = $Program;
+
+        return $this;
+    }
+
+    public function getReview(): ?Program
+    {
+        return $this->review;
+    }
+
+    public function setReview(?Program $review): self
+    {
+        $this->review = $review;
+
+        return $this;
+    }
+
+    public function getReviews(): ?Circuit
+    {
+        return $this->reviews;
+    }
+
+    public function setReviews(?Circuit $reviews): self
+    {
+        $this->reviews = $reviews;
+
+        return $this;
+    }
+
+    public function getUsername(): ?string
+    {
+        return $this->username;
+    }
+
+    public function setUsername(string $username): self
+    {
+        $this->username = $username;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
 
         return $this;
     }

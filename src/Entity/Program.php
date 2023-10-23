@@ -34,9 +34,15 @@ class Program
      */
     private $reviews;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Review::class, mappedBy="review")
+     */
+    private $review;
+
     public function __construct()
     {
         $this->reviews = new ArrayCollection();
+        $this->review = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -96,5 +102,13 @@ class Program
         }
 
         return $this;
+    }
+
+    /**
+     * @return Collection<int, Review>
+     */
+    public function getReview(): Collection
+    {
+        return $this->review;
     }
 }
