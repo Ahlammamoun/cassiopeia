@@ -58,7 +58,13 @@
 
 
         <a class="fst-normal" href="{{ path('circuit_review_add', {id: circuit.id}) }}">ajouter un commentaire</a>
-            </6>
+            
+           <ul class="list-group-review">
+
+
+        <li class="list-group-review">Le dernier commentaire</li>
+                  <li class="list-group-review">{{ lastReview.username }}<br>{{ lastReview.title }}<br>{{ lastReview.description }}<br>{{ lastReview.rating }}<br>  </li>
+                </ul>
 
           </div>
   </div>

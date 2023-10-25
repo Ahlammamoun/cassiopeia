@@ -41,7 +41,17 @@ class LaureatRepository extends ServiceEntityRepository
     public function orderByLastname()
     {
         $results = $this->createQueryBuilder('l')
-        ->orderBy('l.lastname' , 'ASC')
+        ->orderBy('l.lastname', 'ASC')
+        ->getQuery()
+        ->getResult();
+
+        return $results;
+
+    }
+
+    public function orderByDilpomas()
+    {
+        $results = $this->createQueryBuilder('l')
         ->orderBy('l.diplomas', 'ASC')
         ->getQuery()
         ->getResult();
@@ -49,6 +59,11 @@ class LaureatRepository extends ServiceEntityRepository
         return $results;
 
     }
+
+
+
+
+
 //    /**
 //     * @return Laureat[] Returns an array of Laureat objects
 //     */

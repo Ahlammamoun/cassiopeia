@@ -117,13 +117,16 @@ a.dropdown-item:hover {
 
 form {
     height: 3%;
-    display: flex;
-    justify-content: center;
     text-align: center;
     font-style: normal;
     font-weight: bold;
     color: rgb(189, 170, 170);
     background: linear-gradient(180deg, blue, black);
+    
+ 
+}
+div#review_reaction {
+    text-align: start;
 }
 
 img.logo {
@@ -152,18 +155,25 @@ p.card-text {
 }
 
 h5.card-title {
-
-
     font-style: normal;
     font-size: x-large;
     color: rgb(65, 105, 235);
 
 }
-
+ul.list-group-review {
+    border: 4mm ridge #01012b;
+}
 li.list-group-item {
     font-style: normal;
     font-weight: bold;
     font-size: larger;
     background: linear-gradient(180deg, blue, black);
+    color: rgb(189, 170, 170);
+}
+li.list-group-review {
+    font-style: normal;
+    font-weight: bold;
+    font-size: larger;
+    background: linear-gradient(10deg, blue, black);
     color: rgb(189, 170, 170);
 }

@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ReviewRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ReviewRepository::class)
@@ -19,16 +20,20 @@ class Review
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $title;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
+     * @Assert\Lenght(min=10)
      */
     private $description;
 
     /**
      * @ORM\Column(type="float")
+     * @Assert\NotBlank
      */
     private $rating;
 
@@ -55,8 +60,22 @@ class Review
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Email( message: 'The email {{ value }} is not a valid email.',)
+     * @Assert\NotBlank
      */
     private $email;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
+     */
+    private $reaction;
+
+    /**
+     * @ORM\Column(type="datetime_immutable")
+     * @Assert\NotBlank
+     */
+    private $BeenWhen;
 
     public function getId(): ?int
     {
@@ -155,6 +174,30 @@ class Review
     public function setEmail(string $email): self
     {
         $this->email = $email;
+
+        return $this;
+    }
+
+    public function getReaction(): ?string
+    {
+        return $this->reaction;
+    }
+
+    public function setReaction(string $reaction): self
+    {
+        $this->reaction = $reaction;
+
+        return $this;
+    }
+
+    public function getBeenWhen(): ?\DateTimeInterface
+    {
+        return $this->BeenWhen;
+    }
+
+    public function setBeenWhen(\DateTimeInterface $BeenWhen): self
+    {
+        $this->BeenWhen = $BeenWhen;
 
         return $this;
     }

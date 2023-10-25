@@ -18,6 +18,7 @@ class LaureatController extends AbstractController
     {
      
         $laureats = $laureatRepo->orderByLastname();
+        
 
         return $this->render(
             'laureat/laureat.html.twig',

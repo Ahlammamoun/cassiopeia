@@ -17,5 +17,10 @@
 
 {% block body %}
 
-{{ form(formulaire)}}
+{{ form_start(formulaire, {novalidate: 'novalidate'}) }}
+
+    {{ form_widget(formulaire) }}
+    <button class ="btn btn-dark" type="submit">Ajouter</button>
+
+{{ form_end(formulaire) }}
 {% endblock %}

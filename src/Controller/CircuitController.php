@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\CircuitRepository;
+use App\Repository\ReviewRepository;
 use App\Entity\Circuit;
 use Doctrine\ORM\EntityManagerInterface;
 
@@ -17,17 +18,19 @@ class CircuitController extends AbstractController
     /**
      * @Route("/circuit/{id}", name="circuit", requirements={"id": "\d+"})
      */
-    public function show(CircuitRepository $circuitRepo, int $id): Response
+    public function show(CircuitRepository $circuitRepo, int $id, ReviewRepository $reviewRepo): Response
     {
         $circuit = $circuitRepo->find($id);
         //dump($circuit);
         //dd($circuit);
 
+        $lastReview = $reviewRepo->findBy(['reviews' => $circuit], ['id' => 'DESC'], 1);
+
         return $this->render('circuit/show.html.twig',
             
             [
-       
-            'circuit' => $circuit
+                'lastReview' => $lastReview[0],
+                'circuit' => $circuit
             ]
         );
     }
