@@ -63,7 +63,12 @@
 
 
         <li class="list-group-review">Le dernier commentaire</li>
+        {% for lastReview in lastReviews %}
                   <li class="list-group-review">{{ lastReview.username }}<br>{{ lastReview.title }}<br>{{ lastReview.description }}<br>{{ lastReview.rating }}<br>  </li>
+        {% else %}
+           <h4 class="card-percent fst-normal">Pas de commentaire pour le moment</h4>
+
+        {% endfor %}
                 </ul>
 
           </div>

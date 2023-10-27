@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Circuit index{% endblock %}
+
+{% block body %}
+    <h1>Circuit index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                {#<th>Course</th>#}
+                {#<th>Teacher</th>#}
+                {#<th>Student</th>#}
+                <th>Duration</th>
+                <th>Difficulties</th>
+                <th>Success</th>
+                <th>Diplomas</th>
+                <th>Picture</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for circuit in circuits %}
+            <tr>
+                <td>{{ circuit.id }}</td>
+                <td>{{ circuit.title }}</td>
+                <td>{{ circuit.description }}</td>
+                {#<td>{{ circuit.course }}</td>#}
+                {#<td>{{ circuit.teacher }}</td>#}
+                {#<td>{{ circuit.student }}</td>#}
+                <td>{{ circuit.duration }}</td>
+                <td>{{ circuit.difficulties }}</td>
+                <td>{{ circuit.success }}</td>
+                <td>{{ circuit.diplomas }}</td>
+                <td>{{ circuit.picture }}</td>
+                <td>
+                    <a href="{{ path('app_back_circuit_show', {'id': circuit.id}) }}">show</a>
+                    <a href="{{ path('app_back_circuit_edit', {'id': circuit.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="12">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_back_circuit_new') }}">Create new</a>
+{% endblock %}

@@ -24,12 +24,13 @@ class CircuitController extends AbstractController
         //dump($circuit);
         //dd($circuit);
 
-        $lastReview = $reviewRepo->findBy(['reviews' => $circuit], ['id' => 'DESC'], 1);
+        $lastReviews = $reviewRepo->findBy(['reviews' => $circuit], ['id' => 'DESC'], 1);
 
+    
         return $this->render('circuit/show.html.twig',
             
             [
-                'lastReview' => $lastReview[0],
+                'lastReviews' => $lastReviews,
                 'circuit' => $circuit
             ]
         );
