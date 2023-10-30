@@ -111,4 +111,13 @@ class Student
 
         return $this;
     }
+    public function getFirstnameAndLastnameOfStudent()
+    {
+
+        return  $this->getFirstname() .  ' '  . '' .  $this->getLastname();
+
+    }
+
+
+
 }

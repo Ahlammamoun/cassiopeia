@@ -18,27 +18,23 @@ class TeacherType extends AbstractType
             ->add('firstname')
             ->add('lastname')
             ->add('formation')
-           /* ->add('circuit',EntityType::class,
+            ->add('circuit',EntityType::class,
             [
                 'class' => Circuit::class,
                 'choice_label' => 'title',
-                'multiple' => true,
-                'expanded' => true,
+                //'multiple' => true,
+                //'expanded' => true,
             ]
             
-            )*/
+            )
             ->add('students',EntityType::class,
                 [
                     'class' => Student::class,
-                    'choice_label' => 'firstname',
+                    'choice_label' => 'getFirstnameAndLastnameOfStudent',
                     'multiple' => true,
                     'expanded' => true,
                 ]
              );
-
-
-
-
 
         
     }

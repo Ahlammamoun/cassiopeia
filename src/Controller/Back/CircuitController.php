@@ -59,13 +59,18 @@ class CircuitController extends AbstractController
     /**
      * @Route("/{id}/edit", name="app_back_circuit_edit", methods={"GET", "POST"})
      */
-    public function edit(Request $request, Circuit $circuit, CircuitRepository $circuitRepository): Response
+    public function edit(Request $request, Circuit $circuit, CircuitRepository $circuitRepository ): Response
     {
         $form = $this->createForm(CircuitType::class, $circuit);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $circuitRepository->add($circuit, true);
+
+            $this->addFlash(
+                'notice',
+                'les modifications ont bien été sauvegardées!'
+            );
 
             return $this->redirectToRoute('app_back_circuit_index', [], Response::HTTP_SEE_OTHER);
         }
@@ -83,6 +88,13 @@ class CircuitController extends AbstractController
     {
         if ($this->isCsrfTokenValid('delete'.$circuit->getId(), $request->request->get('_token'))) {
             $circuitRepository->remove($circuit, true);
+        } else {
+            $this->addFlash(
+                'error',
+                'les modifications n\'ont pas été supprimées!'
+            );
+
+
         }
 
         return $this->redirectToRoute('app_back_circuit_index', [], Response::HTTP_SEE_OTHER);

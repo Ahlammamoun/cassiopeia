@@ -126,4 +126,14 @@ class Teacher
 
         return $this;
     }
+
+    public function getFirstnameAndLastnameOfTeachers()
+    {
+
+        return  $this->getFirstname() .  ' '  . '' .  $this->getLastname();
+
+    }
+
+
+
 }

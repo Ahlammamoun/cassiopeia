@@ -21,7 +21,7 @@ class StudentType extends AbstractType
             
             [
                 'class' => Teacher::class,
-                'choice_label' => 'lastname',
+                'choice_label' => 'getFirstnameAndLastnameOfTeachers',
                 'multiple' => true,
                 'expanded' => true,
             ]);
