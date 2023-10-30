@@ -46,7 +46,7 @@
          </a>
       <ul class="dropdown-menu">
          <li><a class="dropdown-item text-uppercase" href="#"></a></li>
-         <li><a class="dropdown-item" href="">Backoffice</a></li>
+         <li><a class="dropdown-item" href="{{ path ('app_back_circuit_index') }}">Backoffice</a></li>
          <li>
             <hr class="dropdown-divider">
          </li>
@@ -58,13 +58,13 @@
    </div>
       <a href="#" class="btn btn-dark btn-lg border-primary text-primary fst-normal" role="button" aria-pressed="true">Connexion</a>
 </nav>
-{% block title %}
+{% block title %}{% endblock %}
 
-{% endblock %}
+{% block admin_nav %}{% endblock %}
 
-{% block body %}
+{% block body %}{% endblock %}
 
-{% endblock %}
+
 
 
 

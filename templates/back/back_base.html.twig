@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block admin_nav %}
+
+
+{% block title_admin %} {% endblock %}
+
+<nav class="navbar navbar-expand-lg navbar-primary bg-dark">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ path ('app_back_circuit_index')}}">Cicruits</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path ('app_back_student_index')}}">Students</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path ('app_back_teacher_index')}}">Teachers</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+{% endblock %}
+
