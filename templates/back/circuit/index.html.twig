@@ -2,10 +2,6 @@
 
 {% extends 'back/back_base.html.twig' %}
 
-
-
-{% block title_admin %} page d'administration {% endblock %}
-{% block title %}circuit index{% endblock %}
 {% block body %}
 
     {% for message in app.flashes('notice') %}
@@ -18,7 +14,8 @@
         {{ message }}
     </div>
 {% endfor %}
-    <table class="table">
+<h2 class="text-center text-dark fst-normal">Circuit</h2>
+    <table class="table fst-normal">
         <thead>
             <tr>
                 <th>Id</th>
