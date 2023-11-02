@@ -5,7 +5,7 @@
 {% block body %}
     <h2 class="text-center text-dark fst-normal">Circuit</h2>
 
-    <table class="table">
+    <table class="table fst-normal">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -23,7 +23,7 @@
                 <th>Course</th>
                 <td>{{ circuit.course }}</td>
             </tr>#}
-                <tr>
+                {#<tr>
                 <th>Teacher</th>
                 <td>{{ circuit.teacher }}</td>
             </tr>
@@ -54,9 +54,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_back_circuit_index') }}">back to list</a>
+    <a href="{{ path('app_back_circuit_index') }}" class="btn btn-dark w-100 fst-normal">back to list</a>
 
-    <a href="{{ path('app_back_circuit_edit', {'id': circuit.id}) }}">edit</a>
+    <a href="{{ path('app_back_circuit_edit', {'id': circuit.id}) }}" class="btn btn-success w-100 fst-normal">edit</a>
 
     {{ include('back/circuit/_delete_form.html.twig') }}
 {% endblock %}

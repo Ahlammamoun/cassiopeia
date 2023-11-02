@@ -19,7 +19,7 @@ class CircuitType extends AbstractType
             ->add('title')
             ->add('description')
             //->add('course')
-            ->add('teachers',EntityType::class, 
+            /*->add('teachers',EntityType::class, 
             
             [
                
@@ -27,7 +27,7 @@ class CircuitType extends AbstractType
                 'choice_label' => 'getFirstnameAndLastnameOfTeachers',
                 'multiple' => true,
                 'expanded' => true,
-            ])
+            ])*/
             //->add('student')
             ->add('duration')
             ->add('difficulties')

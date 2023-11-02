@@ -3,8 +3,12 @@
 namespace App\Controller\Back;
 
 use App\Entity\Teacher;
+use App\Entity\Circuit;
+use App\Entity\Student;
 use App\Form\TeacherType;
 use App\Repository\TeacherRepository;
+use App\Repository\StudentRepository;
+use App\Repository\CircuitRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -22,6 +26,17 @@ class TeacherController extends AbstractController
     {
         return $this->render('back/teacher/index.html.twig', [
             'teachers' => $teacherRepository->findAll(),
+        ]);
+    }
+   /**
+     * @Route("/circuit/{id}", name="app_back_teacher_index_by_circuit", methods={"GET"})
+     */
+    public function listOfTeacherForOnCircuit(TeacherRepository $teacherRepository, Circuit $circuit): Response
+    {
+        $teachers = $teacherRepository->findBy(['circuit'=>$circuit]);
+
+        return $this->render('back/teacher/index.html.twig', [
+            'teachers' => $teachers,
         ]);
     }
 

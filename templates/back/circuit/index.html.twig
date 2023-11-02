@@ -22,7 +22,7 @@
                 <th>Title</th>
                 <th>Description</th>
                 {#<th>Course</th>#}
-                <th>Teacher</th>
+                {#<th>Teacher</th>
                 {#<th>Student</th>#}
                 <th>Duration</th>
                 <th>Difficulties</th>
@@ -39,7 +39,7 @@
                 <td>{{ circuit.title }}</td>
                 <td>{{ circuit.description }}</td>
                 {#<td>{{ circuit.course }}</td>#}
-                <td>{{ circuit.teacher }}</td>
+                {#<td>{{ circuit.teacher }}</td>
                 {#<td>{{ circuit.student }}</td>#}
                 <td>{{ circuit.duration }}</td>
                 <td>{{ circuit.difficulties }}</td>
@@ -47,8 +47,10 @@
                 <td>{{ circuit.diplomas }}</td>
                 <td>{{ circuit.picture }}</td>
                 <td>
-                    <a href="{{ path('app_back_circuit_show', {'id': circuit.id}) }}">show</a>
-                    <a href="{{ path('app_back_circuit_edit', {'id': circuit.id}) }}">edit</a>
+                    <a href="{{ path('app_back_circuit_show', {'id': circuit.id}) }}" class="btn btn-success w-100">show</a>
+                    <a href="{{ path('app_back_circuit_edit', {'id': circuit.id}) }}" class="btn btn-dark w-100">edit</a>
+                    <a href="{{ path('app_back_teacher_index_by_circuit', {'id': circuit.id}) }}" class="btn btn-success w-100">teachers</a>
+                    <a href="{{ path('app_back_teacher_index_by_circuit', {'id': circuit.id}) }}" class="btn btn-dark w-100">students</a>
                 </td>
             </tr>
         {% else %}
@@ -59,5 +61,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_back_circuit_new') }}">Create new</a>
+    <a href="{{ path('app_back_circuit_new') }}" class="btn btn-success w-100 fst-normal text-light">Create new</a>
 {% endblock %}

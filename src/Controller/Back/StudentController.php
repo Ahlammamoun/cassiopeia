@@ -4,6 +4,10 @@ namespace App\Controller\Back;
 
 use App\Entity\Student;
 use App\Form\StudentType;
+use App\Entity\Circuit;
+use App\Entity\Teacher;
+use App\Repository\TeacherRepository;
+use App\Repository\CircuitRepository;
 use App\Repository\StudentRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -22,6 +26,17 @@ class StudentController extends AbstractController
     {
         return $this->render('back/student/index.html.twig', [
             'students' => $studentRepository->findAll(),
+        ]);
+    }
+ /**
+     * @Route("/circuit/{id}", name="app_back_student_index_circuit", methods={"GET"})
+     */
+    public function ListOfStudentByCircuit(StudentRepository $studentRepository, circuit $circuit): Response
+    {
+        $students = $studentRepository->findBy(['circuit'=>$circuit]);
+
+        return $this->render('back/student/index.html.twig', [
+            'students' => $students,
         ]);
     }
 

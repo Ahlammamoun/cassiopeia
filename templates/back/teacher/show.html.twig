@@ -26,9 +26,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_back_teacher_index') }}">back to list</a>
+    <a href="{{ path('app_back_teacher_index') }}" class="btn btn-dark w-100 fst-normal">back to list</a>
 
-    <a href="{{ path('app_back_teacher_edit', {'id': teacher.id}) }}">edit</a>
+    <a href="{{ path('app_back_teacher_edit', {'id': teacher.id}) }}" class="btn btn-success w-100 fst-normal">edit</a>
 
     {{ include('back/teacher/_delete_form.html.twig') }}
 {% endblock %}

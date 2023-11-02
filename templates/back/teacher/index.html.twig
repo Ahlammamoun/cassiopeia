@@ -23,8 +23,8 @@
                 <td>{{ teacher.lastname }}</td>
                 <td>{{ teacher.formation }}</td>
                 <td>
-                    <a href="{{ path('app_back_teacher_show', {'id': teacher.id}) }}">show</a>
-                    <a href="{{ path('app_back_teacher_edit', {'id': teacher.id}) }}">edit</a>
+                    <a href="{{ path('app_back_teacher_show', {'id': teacher.id}) }}" class="btn btn-success w-100">show</a>
+                    <a href="{{ path('app_back_teacher_edit', {'id': teacher.id}) }}" class="btn btn-dark w-100">edit</a>       
                 </td>
             </tr>
         {% else %}
@@ -35,5 +35,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_back_teacher_new') }}">Create new</a>
+    <a href="{{ path('app_back_teacher_new') }}" class="btn btn-success w-100 fst-normal text-light">Create new</a>
 {% endblock %}
