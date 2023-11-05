@@ -20,11 +20,7 @@
    <div class="container-fluid">
     <img src="/assets/favicon.png" height="25" alt="logo" class="logo">
       <a class="navbar-brand text-uppercase font-weight-bold " href="{{ path ('cursus') }}">cassiopeia</a>
-      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
-   
-         <ul class="navbar-nav d-flex align-items-end ">
+       <ul class="navbar-nav d-flex align-items-end ">
       <li class="nav-item">
          <a class="nav-link active text-primary" aria-current="page" href="{{ path ('cursus') }}">Cursus</a>
       </li>
@@ -36,7 +32,7 @@
          <a class="nav-link text-primary" href="{{ path ('teacher') }}">Les Professeurs</a>
       </li>
             
-   {% if app.user %}
+   {% if app.user != null %}
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
       <li class="nav-item dropdown">
          <a class="nav-link dropdown-toggle text-primary" href="#" id="navbarDropdown" role="button"
@@ -45,7 +41,8 @@
                <i class="bi bi person-square">
          </a>
       <ul class="dropdown-menu">
-         <li><a class="dropdown-item text-uppercase" href="#"></a></li>
+       <li><a class="dropdown-item" href="#">{{ app.user.DisplayRole }}</a></li>
+                <hr class="dropdown-divider">
          <li><a class="dropdown-item" href="{{ path ('app_back_circuit_index') }}">Backoffice</a></li>
          <li>
             <hr class="dropdown-divider">
